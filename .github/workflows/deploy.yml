@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          IMAGE_NAME=korbendallasmercy/fastapi_demo:${{ github.sha }}
+          IMAGE_NAME=d3c4d4nc3/fastapi_demo:${{ github.sha }}
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
           echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_ENV
