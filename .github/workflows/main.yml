@@ -38,17 +38,15 @@ jobs:
 
   deploy-to-k8s:
     needs: docker-build-push
-    # ВАРИАНТ 1: для self-hosted раннера на машине с Minikube
     runs-on: self-hosted
-    # ВАРИАНТ 2 (если у вас удалённый кластер, доступный извне): можно оставить ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
+      #- name: Set up kubectl
+      #  uses: azure/setup-kubectl@v3
+      #  with:
+      #    version: 'latest'
 
       - name: Configure kubeconfig
         run: |
