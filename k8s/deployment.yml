@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app-container
-        image: d3c4d4nc3/fastapi_demo:e4db1916a6e24510e29dabb3a5b7fddb40f2ee3e
+        image: d3c4d4nc3/fastapi_demo:560b5978b2fe01a7d26124b235ee24e4cbfcc1d4
         ports:
         - containerPort: 8000
 
