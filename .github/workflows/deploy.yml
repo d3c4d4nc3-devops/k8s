@@ -33,8 +33,9 @@ jobs:
 
       - name: Push commit back to repo
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push origin HEAD:main
+          # git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          # git push origin HEAD:main
+          echo
 
   deploy-to-k8s:
     needs: docker-build-push
